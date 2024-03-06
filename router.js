@@ -30,4 +30,17 @@ router.get("/dashboard", (req, res) => {
   }
 });
 
+//logout route
+
+router.get("/logout", (req, res) => {
+  req.session.destroy(function (err) {
+    if (err) {
+      console.log(err);
+      res.send("Error");
+    } else {
+      res.render("base", { title: "Express", logout: "Logout Successfully!" });
+    }
+  });
+});
+
 module.exports = router;
