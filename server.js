@@ -2,12 +2,22 @@ const express = require("express");
 const path = require("path");
 const app = express();
 const bodyparser = require("body-parser");
+const session = require("express-session");
 
 const PORT = process.env.PORT || 3000;
 
 //adding bosyparser the project
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({ extended: true }));
+
+//add session to the project
+app.use(
+  session({
+    secret: "secret",
+    resave: false,
+    saveUninitialized: true,
+  })
+);
 
 app.set("view engine", "ejs");
 
