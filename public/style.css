@@ -4,6 +4,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-image: url("/assets/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .login-form {
   width: 100%;
@@ -29,4 +32,13 @@ input[type="password"] {
 }
 button[type="submit"] {
   border-radius: 20px;
+}
+
+button[type="submit"] {
+  border-radius: 20px;
+  background-color: rgb(63, 63, 237); /* Change the background color */
+}
+
+button[type="submit"]:hover {
+  background-color: green; /* Change the background color on hover */
 }
