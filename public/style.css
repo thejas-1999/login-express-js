@@ -42,3 +42,10 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: green; /* Change the background color on hover */
 }
+
+.login-message {
+  text-align: center;
+  font-size: 16px;
+  color: #333;
+  margin-top: 20px;
+}
