@@ -3,6 +3,7 @@ const path = require("path");
 const app = express();
 const bodyparser = require("body-parser");
 const session = require("express-session");
+const { v4: uuidv4 } = require("uuid");
 
 const PORT = process.env.PORT || 3000;
 
@@ -13,7 +14,7 @@ app.use(bodyparser.urlencoded({ extended: true }));
 //add session to the project
 app.use(
   session({
-    secret: "secret",
+    secret: uuidv4(),
     resave: false,
     saveUninitialized: true,
   })
