@@ -1,0 +1,101 @@
+<%- include('header') %>
+
+    <div class="background">
+        <div class="container">
+            <div class="dashboard">
+                <h2>Welcome to Express Dashboard, <%= User %>!</h2>
+                <a href="/route/logout" class="logout-btn">Logout</a>
+
+                <!-- Add your dashboard content here -->
+            </div>
+        </div>
+    </div>
+
+    <%- include('footer') %>
+
+        <style>
+            /* Background color */
+            .background {
+                background-color: #f0f0f0;
+                /* Light gray background color */
+                padding: 20px;
+                /* Add padding to create space around the container */
+                height: 100vh;
+                /* Set height to fill the viewport */
+            }
+
+            /* Container styles */
+            .container {
+                max-width: 1200px;
+                /* Set maximum width of the container */
+                margin: 0 auto;
+                /* Center the container horizontally */
+                padding: 20px;
+                /* Add padding to create space inside the container */
+            }
+
+            /* Dashboard styles */
+            .dashboard {
+                background-color: #fff;
+                /* White background color for the dashboard */
+                padding: 20px;
+                /* Add padding to create space inside the dashboard */
+                border-radius: 10px;
+                /* Add rounded corners */
+                text-align: center;
+                /* Center align text */
+            }
+
+            .dashboard h2 {
+                margin-bottom: 20px;
+                /* Add space below the heading */
+                font-size: 24px;
+                /* Adjust font size */
+            }
+
+            /* Logout button styles */
+            .logout-btn {
+                display: inline-block;
+                padding: 10px 20px;
+                background-color: #dc3545;
+                /* Red color for the button background */
+                color: white;
+                /* Text color */
+                text-decoration: none;
+                /* Remove underline */
+                border-radius: 5px;
+                /* Rounded corners */
+                transition: background-color 0.3s;
+                /* Smooth transition for background color */
+            }
+
+            .logout-btn:hover {
+                background-color: #c82333;
+                /* Darker red color on hover */
+            }
+
+            /* Responsive styles */
+            @media (max-width: 768px) {
+                .container {
+                    padding: 10px;
+                    /* Reduce padding for smaller screens */
+                }
+
+                .dashboard {
+                    padding: 15px;
+                    /* Reduce padding for smaller screens */
+                }
+
+                .dashboard h2 {
+                    font-size: 20px;
+                    /* Adjust font size for smaller screens */
+                }
+
+                .logout-btn {
+                    padding: 8px 16px;
+                    /* Reduce padding for smaller screens */
+                    font-size: 14px;
+                    /* Adjust font size for smaller screens */
+                }
+            }
+        </style>

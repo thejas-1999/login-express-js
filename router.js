@@ -13,10 +13,20 @@ router.post("/login", (req, res) => {
     req.body.password === credential.password
   ) {
     req.session.user = req.body.email;
-    /*  res.render("/dashboard"); */
-    res.end("Welcome");
+    res.redirect("/route/dashboard");
+    /*  res.end("Welcome"); */
   } else {
     res.end("Invalid username or password");
+  }
+});
+
+//route for dashboard
+
+router.get("/dashboard", (req, res) => {
+  if (req.session.user) {
+    res.render("dashboard", { User: req.session.user });
+  } else {
+    res.end(`Unautherised User`);
   }
 });
 
